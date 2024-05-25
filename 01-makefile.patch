@@ -1,0 +1,12 @@
+diff --git a/drivers/i2c/Makefile b/drivers/i2c/Makefile
+index c1d493dc9bac..83c857a50d3c 100644
+--- a/drivers/i2c/Makefile
++++ b/drivers/i2c/Makefile
+@@ -17,5 +17,6 @@ obj-y				+= algos/ busses/ muxes/
+ obj-$(CONFIG_I2C_STUB)		+= i2c-stub.o
+ obj-$(CONFIG_I2C_SLAVE_EEPROM)	+= i2c-slave-eeprom.o
+ obj-$(CONFIG_I2C_SLAVE_TESTUNIT)	+= i2c-slave-testunit.o
++obj-$(CONFIG_M5_8ANGLE) += m5_8angle.o
+ 
+ ccflags-$(CONFIG_I2C_DEBUG_CORE) := -DDEBUG
+

@@ -1,0 +1,19 @@
+diff --git a/drivers/i2c/Kconfig b/drivers/i2c/Kconfig
+index 438905e2a1d0..56a608dfc676 100644
+--- a/drivers/i2c/Kconfig
++++ b/drivers/i2c/Kconfig
+@@ -159,6 +159,13 @@ config I2C_DEBUG_BUS
+ 	  a problem with I2C support and want to see more of what is going
+ 	  on.
+ 
++config M5_8ANGLE 
++   tristate "M5 Stack 8Angle device driver"
++   default y
++   depends on I2C=y && m && LEDS_CLASS_MULTICOLOR
++   help
++       Say Y here if you have the m5 Stack 8angle.
++
+ endif # I2C
+ 
+ endmenu
+
